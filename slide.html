@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.viewport {
+			    width: 500%;
+			    display: -webkit-box;
+			    -webkit-transform: translate3d(0,0,0);
+			    backface-visibility: hidden;
+			}
+			.viewport, body, html {
+			    height: 100%;
+			    overflow: hidden;
+			    position: relative;
+			}
+			.flex {
+			    display: -webkit-box;
+			    display: -webkit-flex;
+			    display: -ms-flexbox;
+			    display: flex;
+			}
+			.pageview {
+			    -webkit-box-flex: 1;
+			    width: 0;
+			    -webkit-box-align: center;
+			    -webkit-align-items: center;
+			    -ms-flex-align: center;
+			    align-items: center;
+			    -webkit-box-pack: center;
+			    -webkit-justify-content: center;
+			    -ms-flex-pack: center;
+			    justify-content: center;
+			    font-size: 50px;
+			    color: #232C41;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="viewport" class="viewport">
+		    <div class="pageview flex" style="background: #3b76c0">
+		        <h3>1</h3>
+		    </div>
+		    <div class="pageview flex" style="background: #58c03b;">
+		        <h3>2</h3>
+		    </div>
+		    <div class="pageview flex" style="background: #c03b25;">
+		        <h3>3</h3>
+		    </div>
+		    <div class="pageview flex" style="background: #e0a718;">
+		        <h3>4</h3>
+		    </div>
+		    <div class="pageview flex" style="background: #c03eac;">
+		        <h3>5</h3>
+		    </div>
+		  </div>
+		  <script src="slide.js"></script>
+		  <script type="text/javascript">
+		  		
+		  		new slide({
+		  			//绑定元素
+		  			target : ".viewport",
+		  			//总条数
+		  			conut : 5,
+		  			//回调函数
+		  			callback : function(num){
+		  				//返回页码
+		  			}
+		  		})
+		  </script>
+	</body>
+</html>
